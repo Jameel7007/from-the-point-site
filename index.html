@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>From the Point</title>
+    <meta
+      name="description"
+      content="A contemplative scroll through Islamic sacred geometry — from a single point to the twelvefold master pattern."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230b101d'/%3E%3Ccircle cx='16' cy='16' r='3.2' fill='%23efe6d0'/%3E%3C/svg%3E"
+    />
+    <style>
+      /* Loading veil — inline so it paints before anything else loads.
+         The point waits on the field; the site dissolves it when ready. */
+      #veil {
+        position: fixed;
+        inset: 0;
+        z-index: 40;
+        background: #0b101d;
+        display: grid;
+        place-items: center;
+        transition: opacity 0.7s ease;
+      }
+      #veil::after {
+        content: '';
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #efe6d0;
+        animation: veil-breathe 1.8s ease-in-out infinite;
+      }
+      #veil.veil-out {
+        opacity: 0;
+        pointer-events: none;
+      }
+      @keyframes veil-breathe {
+        0%,
+        100% {
+          opacity: 0.35;
+        }
+        50% {
+          opacity: 0.9;
+        }
+      }
+    </style>
+    <script type="module" crossorigin src="/from-the-point-site/assets/main-PpXjvrEP.js"></script>
+    <link rel="modulepreload" crossorigin href="/from-the-point-site/assets/svg-X5PNrQIH.js">
+    <link rel="stylesheet" crossorigin href="/from-the-point-site/assets/main-D4nkOhVr.css">
+  </head>
+  <body>
+    <main>
+      <div id="spine">
+        <div id="stage"></div>
+      </div>
+      <footer>
+        <section class="about">
+          <h2>About this drawing</h2>
+          <p>
+            A modern digital rendering of ancient Islamic geometry. Every figure is constructed
+            in code using the principles underlying the historical patterns: circles swept as a
+            compass sweeps, lines ruled from point to point, each construction resting on the
+            last, every measure derived from the first radius. What appears is not decoration
+            but consequence.
+          </p>
+          <p>
+            The progression moves through the tradition’s recurring families: point, circle,
+            vesica, sixfold rose, eightfold <i lang="ar-Latn">khātam</i>, tenfold rosette of the
+            golden section, and the twelvefold master pattern found in zellij and Persian
+            tilework.
+            Then, as it began, it returns.
+          </p>
+          <p class="colophon">
+            After Keith Critchlow’s <i>Islamic Patterns</i>. Drawn with compass and
+            straightedge, in code.
+          </p>
+          <p class="signature">Muhammad Jameel</p>
+        </section>
+      </footer>
+    </main>
+    <div class="progress" aria-hidden="true">
+      <div class="progress-track"><div class="progress-dot"></div></div>
+    </div>
+    <div class="dev-hud" aria-hidden="true"></div>
+    <div id="veil" aria-hidden="true"></div>
+  </body>
+</html>
