@@ -10,22 +10,14 @@
 
 A scroll-driven drawing of Islamic geometric patterns. The sequence begins with a point, then develops a circle, vesica, sixfold rose, eightfold *khātam*, tenfold rosette, and twelvefold pattern before returning to the point. The site's colophon credits Keith Critchlow's *Islamic Patterns* as an inspiration.
 
-## What this repository contains
+## How it is drawn
 
-This is the **published GitHub Pages output**: `index.html`, generated JavaScript and CSS in `assets/`, and `.nojekyll`. The original, editable source project is private and is **not included here**. Generated bundles are not a useful substitute for the original modules, build configuration, or tests, so this repository currently demonstrates the deployed result rather than the implementation.
+Every figure is constructed live in the browser from one shared radius, using the same compass-and-straightedge relationships a craftsman would use on paper: circles placed on circles, intersections joined, and each new order of pattern grown out of the last. Scroll position drives the whole drawing, so scrolling back unwinds it step by step until only the point remains.
 
-The page's HTML describes the drawing as a sequence constructed from a shared radius using compass and straightedge relationships. The generated files are committed here for hosting; changes to the original experience should be made in the source project and redeployed.
+Built with Three.js.
 
-## Preview the deployed files
+## About this repository
 
-The built page loads files from `/from-the-point-site/assets/`. From a directory **containing** this repository as `from-the-point-site/`, run:
+This repository holds the built site that GitHub Pages serves: `index.html`, the bundled JavaScript and CSS in `assets/`, and the README images in `docs/readme/`. The authoring source is kept in a separate repository.
 
-```bash
-python3 -m http.server 8000
-```
-
-Then open `http://localhost:8000/from-the-point-site/`. Opening `index.html` directly from the file system will not reproduce the deployed asset paths.
-
-## For a reviewable source repository
-
-Publish the original source files and their build instructions in a public repository, then link to it here. Keeping this deployment repository separate is fine as long as reviewers can follow that link to the actual source. Do not treat the generated files in `assets/` as the authored source.
+To preview the built files locally, place this repository in a folder named `from-the-point-site/`, run `python3 -m http.server 8000` from the folder above it, and open `http://localhost:8000/from-the-point-site/`. The page expects that path, so opening `index.html` directly will not load its assets.
