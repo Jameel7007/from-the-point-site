@@ -2,6 +2,12 @@
 
 **[Explore the live experience](https://jameel7007.github.io/from-the-point-site/)**
 
+![The twelvefold pattern, fully drawn in gold line on a night-blue ground](docs/readme/twelvefold.jpg)
+
+| The sixfold field | Construction toward the next order |
+| --- | --- |
+| ![Gold hexagons around a sixfold rose](docs/readme/sixfold.jpg) | ![Construction circles and arcs laid over the sixfold field](docs/readme/construction.jpg) |
+
 A scroll-driven drawing of Islamic geometric patterns. The sequence begins with a point, then develops a circle, vesica, sixfold rose, eightfold *khātam*, tenfold rosette, and twelvefold pattern before returning to the point. The site's colophon credits Keith Critchlow's *Islamic Patterns* as an inspiration.
 
 ## What this repository contains
